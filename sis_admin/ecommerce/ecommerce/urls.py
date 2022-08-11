@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ventas.views import inicio,articulo,cliente,crearCliente,venta
-from modulo.compras.views import compra, proveedor, crearProveedor, listadoCompra,registroCompra,pedido
+from modulo.compras.views import compra, proveedor, crearProveedor, listadoCompra,registroCompra,pedido,re_pedido
 from django.conf.urls.static import static
 from ecommerce import settings
 
@@ -33,6 +33,8 @@ urlpatterns = [
     path('listacompra/', listadoCompra, name='listacompra'),
     path('registrar/', registroCompra, name='registrar'),
     path('pedido/', pedido, name='pedido'),
+    path('registrapedido/', re_pedido, name='registrapedido'),
+
 ]
 #if settings.DEBUG:
  #   urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

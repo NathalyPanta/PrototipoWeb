@@ -35,11 +35,11 @@
 </header>
 
 <div class="mb-3 mx-3">
-        <button type="submit" class="btn text-white" style="background-color: #beab72">
+        <button type="submit" class="btn" style="background-color: #beab72">
             <a class="text-decoration-none text-white fw-bold mt-3" href="{% url 'compra' %}">Regresar a Compras</a>
         </button>
-    </div>
-<div class="container my-5">
+</div>
+<div class="container my-3">
 
     <div class="card">
         <div
@@ -78,9 +78,9 @@
           </div>
         </div>
         <div class="card-header" style="background-color: rgb(237,236,232)">
-            <div class="container text-center" >
-                <h2 class="fs-2 fw-bold m-3" style="color:#726e5f">
-                    LISTADO DE COMPRAS
+            <div class="container text-center">
+                <h2 class="fs-1 fw-bold m-3 " style="color:#726e5f">
+                    LISTA DE PEDIDOS
                 </h2>
             </div>
         </div>
@@ -88,53 +88,70 @@
             <div class="table-responsive">
                 <table class="table table-bordered text-center">
                     <thead>
-                    <tr class="table-striped" style="background-color: #726e5f; color: #edece8">
-                        <th scope="col">Referencia</th>
-                        <th scope="col">Proveedor</th>
-                        <th scope="col">Representante de Compra</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Fecha de Pedido</th>
+                    <tr class=" table-striped"style="background-color: #726e5f; color: #edece8">
+                        <th scope="col">FECHA</th>
+                        <th scope="col">PROVEEDOR</th>
+                        <th scope="col">PRODUCTO</th>
+                        <th scope="col">ESTADO</th>
+                        <th scope="col">INVERSIÓN</th>
+                        <th scope="col">FECHA DE ENTREGA</th>
                         <th class="fst-italic text-center" scope="col">Acciones</th>
                     </thead>
                     <tbody>
                     <tr>
-                        <th scope="row">727</th>
+                        <th scope="row">06/06/2022</th>
                         <td>Adriana Canchong</td>
-                        <td>El Pepe</td>
-                        <td>150.45</td>
-                        <td>07/27/22</td>
+                        <td>awa</td>
+                        <td>recibido</td>
+                        <td>300.15</td>
+                        <td>07/27/2022</td>
                         <td class="text-center">
-                            <button class="btn text-white" style="background-color: #726e5f"><a class="text-decoration-none text-white" href="{% url 'registrar' %}">Editar</a></button>
+                            <button class="btn text-white" style="background-color: #726e5f"><a class="text-decoration-none text-white" href="{% url 'registrapedido' %}">Editar</a></button>
                             <button class="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">033</th>
+                        <th scope="row">06/06/2022</th>
                         <td>Adriana Canchong</td>
-                        <td>Ete Sech</td>
-                        <td>777.77</td>
-                        <td>07/27/22</td>
+                        <td>awa</td>
+                        <td>recibido</td>
+                        <td>666.90</td>
+                        <td>07/27/2022</td>
                         <td class="text-center">
-                            <button class="btn text-white" style="background-color: #726e5f"><a class="text-decoration-none text-white" href="{% url 'registrar' %}">Editar</a></button>
+                            <button class="btn text-white" style="background-color: #726e5f"><a class="text-decoration-none text-white" href="{% url 'registrapedido' %}">Editar</a></button>
                             <button class="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">033</th>
-                        <td>Adriana Canchong</td>
-                        <td>Alguien</td>
-                        <td>30.00</td>
-                        <td>07/27/22</td>
+                        <th scope="row">06/06/2022</th>
+                        <td>Aquiles Brinco</td>
+                        <td>awa</td>
+                        <td>no recibido</td>
+                        <td>770.00</td>
+                        <td>08/28/2022</td>
                         <td class="text-center">
-                            <button class="btn text-white" style="background-color: #726e5f"><a class="text-decoration-none text-white" href="{% url 'registrar' %}">Editar</a></button>
+                            <button class="btn text-white" style="background-color: #726e5f"><a class="text-decoration-none text-white" href="{% url 'registrapedido' %}">Editar</a></button>
                             <button class="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>
+                    <tr>
+                        <th scope="row">06/06/2022</th>
+                        <td>Susana Horia</td>
+                        <td>awa</td>
+                        <td>no recibido</td>
+                        <td>80.60</td>
+                        <td>08/28/2022</td>
+                        <td class="text-center">
+                            <button class="btn text-white" style="background-color: #726e5f"><a class="text-decoration-none text-white" href="{% url 'registrapedido' %}">Editar</a></button>
+                            <button class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                    
                     </tbody>
                 </table>
                 <div class="col-12">
-                    <button type="submit" class="btn fw-bold text-white" style="background-color: #beab72">
-                        <a class="text-decoration-none text-white" href="{% url 'registrar' %}">Registrar Nueva Compra</a>
+                    <button type="submit" class="btn text-white" style="background-color: #726e5f">
+                        <a class="text-decoration-none text-white" href="{% url 'registrapedido' %}">Agregar</a>
                         </button>
                 </div>
             </div>

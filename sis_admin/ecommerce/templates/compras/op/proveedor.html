@@ -30,21 +30,57 @@
     {% endblock %}
 </header>
 
-<div class="col-12 mt-3 mb-3 mx-5">
-        <button type="submit" class="btn btn-danger">
-            <a class="text-decoration-none text-white" href="{% url 'compra' %}">Regresar a Compras</a></button>
+<div class="mb-3 mx-3">
+        <button type="submit" class="btn text-white" style="background-color: #beab72">
+            <a class="text-decoration-none text-white fw-bold mt-3" href="{% url 'compra' %}">Regresar a Compras</a>
+        </button>
     </div>
 <div class="container mt-3">
     <div class="card mt-5">
-        <div class="card-header">
-            <h2 class="fs-3 m-3 text-center" style="text-shadow: red -2px 0, cyan 2px 0">
+    <div
+          class="card-header"
+          style="background-color: rgb(114,110,95)"
+        >
+          <div class="container row">
+            <div class="col-md-8">
+              <h2 class="fs-2 fw-bold" style="color:#ded9d6;">SISTEMA ADMINISTRATIVO</h2>
+            </div>
+
+            <div
+              class="col-md-4 wrap rounded-4 text-center"
+              style="background-color: rgba(255, 255, 255, 0.623)"
+            >
+              <div class="widget fw-bold fs-5" style="color:rgb(114,110,95)">
+                <div class="fecha">
+                  <p id="diaSEM" class="diaSEM d-inline"></p>
+                  <p id="dia" class="dia d-inline"></p>
+                  <p class="d-inline">de</p>
+                  <p id="mes" class="mes d-inline"></p>
+                  <p class="d-inline">del</p>
+                  <p id="year" class="year d-inline"></p>
+                </div>
+
+                <div class="reloj">
+                  <p id="horas" class="horas d-inline"></p>
+                  <p class="d-inline">:</p>
+                  <p id="minutos" class="minutos d-inline"></p>
+                  <p class="d-inline">:</p>
+                  <p id="segundos" class="segundos d-inline"></p>
+                </div>
+              </div>
+            </div>
+            <script src="{% static 'js/reloj.js' %}"></script>
+          </div>
+        </div>
+        <div class="card-header" style="background-color: rgb(237,236,232)">
+            <h2 class="fs-1 fw-bold m-3 text-center" style="color:#726e5f">
                 GESTIÓN DE PROVEEDORES
             </h2></div>
-        <div class="card-body">
+        <div class="card-body" style="background-color: rgba(222,217,214,0.25)">
             <div class="table-responsive">
         <table class="table table-bordered">
             <thead>
-            <tr class="table-secondary table-striped">
+            <tr class="table-striped" style="background-color: #726e5f; color: #edece8">
                 <th scope="col">#</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">RUC</th>
@@ -59,11 +95,11 @@
                 <th scope="row">1</th>
                 <td>Adriana Canchong</td>
                 <td>000000000</td>
-                <td>@0959690781</td>
-                <td>El infierno</td>
+                <td>0959690781</td>
+                <td>99900 Bailey Islands Suite 424</td>
                 <td>nohay@gmailcom</td>
                 <td class="text-center">
-                    <button class="btn btn-success">Editar</button>
+                    <button class="btn text-white" style="background-color: #726e5f"><a href="{% url 'crearprov' %}" class="text-decoration-none text-white">Editar</a></button>
                     <button class="btn btn-danger">Eliminar</button>
                 </td>
             </tr>
@@ -71,11 +107,11 @@
                 <th scope="row">1</th>
                 <td>Adriana Canchong</td>
                 <td>000000000</td>
-                <td>@0959690781</td>
-                <td>El infierno</td>
+                <td>0959690781</td>
+                <td>99900 Bailey Islands Suite 424</td>
                 <td>nohay@gmailcom</td>
                 <td class="text-center">
-                    <button class="btn btn-success">Editar</button>
+                    <button class="btn text-white" style="background-color: #726e5f"><a href="{% url 'crearprov' %}" class="text-decoration-none text-white">Editar</a></button>
                     <button class="btn btn-danger">Eliminar</button>
                 </td>
             </tr>
@@ -83,11 +119,11 @@
                 <th scope="row">1</th>
                 <td>Adriana Canchong</td>
                 <td>000000000</td>
-                <td>@0959690781</td>
-                <td>El infierno</td>
+                <td>0959690781</td>
+                <td>99900 Bailey Islands Suite 424</td>
                 <td>nohay@gmailcom</td>
                 <td class="text-center">
-                    <button class="btn btn-success">Editar</button>
+                    <button class="btn text-white" style="background-color: #726e5f"><a href="{% url 'crearprov' %}" class="text-decoration-none text-white">Editar</a></button>
                     <button class="btn btn-danger">Eliminar</button>
                 </td>
             </tr>
@@ -96,7 +132,7 @@
     </div>
             <div class="card- mx-3">
     {% block buttons_list %}
-        <a href="{{ crearP_url }}" class="btn btn-success btn-flat btnTest">
+        <a href="{{ crearP_url }}" class="btn fw-bold text-white" style="background-color: #beab72">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle"
                  viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>

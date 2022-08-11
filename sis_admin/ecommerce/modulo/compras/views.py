@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponse
 
 # Create your views here.
-def compra (request):
+def compra(request):
     data ={
         'titulo':"Inicio"
     }
@@ -32,17 +32,23 @@ def listadoCompra(request):
         'action':'add',
         'listaCompra_url':'listacompra',
     }
-    return render(request, "compras/op/listado.html")
+    return render(request, "compras/op/listado.html",data)
 
 def registroCompra(request):
     data ={
         'titulo':'Registro de Compras',
-
     }
-    return render(request, "compras/op/registro.html")
+    return render(request, "compras/op/registro.html",data)
 
 def pedido(request):
     data ={
         'titulo':'Pedidos'
     }
-    return render(request, "compras/op/pedido.html",data)
+    return render(request, "compras/op/lis_ped.html",data)
+
+def re_pedido(request):
+    data={
+        'titulo':'Registrar Pedido',
+        'RegistraP_url':'pedido'
+    }
+    return render (request, "compras/op/pedido.html",data)

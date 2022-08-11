@@ -34,14 +34,50 @@
     {% endblock %}
 </header>
 
-    <div class="col-12 mt-3 mb-3 mx-5">
-        <button type="submit" class="btn btn-danger">
-            <a class="text-decoration-none text-white" href="{% url 'compra' %}">Regresar a Compras</a></button>
-    </div>
+{#    <div class="mb-3 mx-3">#}
+{#        <button type="submit" class="btn btn-danger">#}
+{#            <a class="text-decoration-none text-white fw-bold mt-3" href="{% url 'compra' %}">Regresar a Compras</a>#}
+{#        </button>#}
+{#    </div>#}
     <div class="container my-5">
         <div class="card">
-            <div class="card-header"><h4 class="fs-2 text-center">Registro de Compras</h4></div>
-            <div class="card-body">
+            <div
+          class="card-header"
+          style="background-color: rgb(114,110,95)"
+        >
+          <div class="container row">
+            <div class="col-md-8">
+              <h2 class="fs-2 fw-bold" style="color: #edece8">SISTEMA ADMINISTRATIVO</h2>
+            </div>
+
+            <div
+              class="col-md-4 wrap rounded-4 text-center"
+              style="background-color: rgba(255, 255, 255, 0.623)"
+            >
+              <div class="widget fw-bold fs-5" style="color:rgb(114,110,95)">
+                <div class="fecha">
+                  <p id="diaSEM" class="diaSEM d-inline"></p>
+                  <p id="dia" class="dia d-inline"></p>
+                  <p class="d-inline">de</p>
+                  <p id="mes" class="mes d-inline"></p>
+                  <p class="d-inline">del</p>
+                  <p id="year" class="year d-inline"></p>
+                </div>
+
+                <div class="reloj">
+                  <p id="horas" class="horas d-inline"></p>
+                  <p class="d-inline">:</p>
+                  <p id="minutos" class="minutos d-inline"></p>
+                  <p class="d-inline">:</p>
+                  <p id="segundos" class="segundos d-inline"></p>
+                </div>
+              </div>
+            </div>
+            <script src="{% static 'js/reloj.js' %}"></script>
+          </div>
+        </div>
+            <div class="card-header" style="background-color: rgb(237,236,232)"><h4 class="fs-1 fw-bold text-center" style="color:#726e5f">Registro de Compras</h4></div>
+            <div class="card-body" style="background-color: rgba(222,217,214,0.25)">
             <div class="container p-3">
                 <form class="row g-3">
                 
@@ -59,7 +95,7 @@
                 </div>
                 <div class="col-md-8">
                 <label for="inputAddress" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+                <input type="text" class="form-control" id="inputAddress">
                 </div>
                 
             </form>
@@ -68,7 +104,7 @@
         </div>
 
         <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="background-color: #beab72">
 
                 <div class="row g-3">
                 <div class="col-sm-7">
@@ -89,48 +125,71 @@
                 
                 </div>              
             </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered text-center">
-                      <thead>
-                        <tr class="table-secondary table-striped">
-                          <th scope="col">Nro</th>
-                          <th scope="col">Código</th>
-                          <th scope="col">Artículo</th>
-                          <th scope="col">Cantidad</th>
-                          <th scope="col">PVP U.</th>
-                          <th scope="col">P. Total</th>               
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>250</td>
-                          <td>Cuaderno</td>
-                          <td>50</td>
-                          <td>1.50</td>
-                          <td>75</td>                          
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>555</td>
-                          <td>Lápices</td>
-                          <td>100</td>
-                          <td>0.50</td>
-                          <td>50</td>                          
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td>..</td>
-                        </tr>
-                      </tbody>
-                    </table>
+            <div class="card-body" style="background-color: rgba(222,217,214,0.25)">
+                <div class="container p-3">
+                <form class="row g-3">
+
+                <div class="col-md-6">
+                <label for="NameId" class="form-label">Referencia</label>
+                <input type="text" class="form-control" id="NameId">
                 </div>
+                <div class="col-md-6">
+                <label for="inputcd" class="form-label">Articulo</label>
+                <input type="text" class="form-control" id="inputcd">
+                </div>
+                <div class="col-md-6">
+                <label for="numero" class="form-label">Cantidad</label>
+                <input type="text" class="form-control" id="numero">
+                </div>
+                <div class="col-md-6">
+                <label for="inputAddress" class="form-label">Total</label>
+                <input type="text" class="form-control" id="inputAddress">
+                </div>
+
+            </form>
+            </div>
+
+{#                <div class="table-responsive">#}
+{#                    <table class="table table-bordered text-center">#}
+{#                      <thead>#}
+{#                        <tr class="table-striped text-white" style="background-color: #726e5f">#}
+{#                          <th scope="col">Nro</th>#}
+{#                          <th scope="col">Código</th>#}
+{#                          <th scope="col">Artículo</th>#}
+{#                          <th scope="col">Cantidad</th>#}
+{#                          <th scope="col">PVP U.</th>#}
+{#                          <th scope="col">P. Total</th>               #}
+{#                      </thead>#}
+{#                      <tbody>#}
+{#                        <tr>#}
+{#                          <th scope="row">1</th>#}
+{#                          <td>250</td>#}
+{#                          <td>Cuaderno</td>#}
+{#                          <td>50</td>#}
+{#                          <td>1.50</td>#}
+{#                          <td>75</td>                          #}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                          <th scope="row">2</th>#}
+{#                          <td>555</td>#}
+{#                          <td>Lápices</td>#}
+{#                          <td>100</td>#}
+{#                          <td>0.50</td>#}
+{#                          <td>50</td>                          #}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                          <th scope="row"></th>#}
+{#                          <td></td>#}
+{#                          <td></td>#}
+{#                          <td></td>#}
+{#                          <td></td>#}
+{#                          <td>..</td>#}
+{#                        </tr>#}
+{#                      </tbody>#}
+{#                    </table>#}
+{#                </div>#}
                 <div class="col-12 text-end">
-                    <button type="submit" class="btn btn-warning">Agregar</button>
+                    <button type="submit" class="btn" style="background-color: #beab72"><a class="text-decoration-none text-white" href="{% url 'listacompra' %}">Agregar</a></button>
                   </div>
             </div>
         </div>
